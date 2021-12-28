@@ -1,4 +1,7 @@
 let set = { index: 0, readMore: "" };
+let scrolling = false;
+let index = 1;
+
 const timeout = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -19,6 +22,8 @@ async function onLoad() {
     $("body").mouseup(function (e) {
         mouseup(e);
     });
+
+    $(".card" ).on('wheel', async function (e) { wheel(e) });
 
     loader.toggle();
 }
@@ -42,12 +47,14 @@ const scrollCards = (direction) => {
     }
     else {
         $(`.scrollBtn`).css("pointer-events", "none").prop("disabled", true);
+        scrolling = true;
 
         set.index += direction;
         view.scrollCards(direction);
 
         setTimeout(() => {
             $(`.scrollBtn`).css("pointer-events", "auto").removeAttr("disabled");
+            scrolling = false;
         }, 500);
     }
 }
@@ -133,6 +140,19 @@ const mouseup = (e) => {
             setTimeout(() => coolDown = false, 500);
         } else {
             reset();
+        }
+    }
+}
+
+const wheel = async (e) => {
+    if (!scrolling) {
+        let dir = Math.sign(e.originalEvent.wheelDelta);
+        let newIndex = index - dir;
+        if (newIndex >= 0 && newIndex <= 2)
+        {
+            index -= dir;
+            index = 1;
+            await scrollCards(dir)
         }
     }
 }

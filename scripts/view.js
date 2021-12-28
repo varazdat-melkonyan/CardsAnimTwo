@@ -129,7 +129,7 @@ const view = {
             },100);
         }
     },
-    reset: (index) => {
+    reset: () => {
         $(".top").css("margin-top", "-2400px");
         $(".center").css("margin-top", "0px");
         $(".bottom").css("margin-top", "2400px");
