@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "text": "Les habitant·es des zones rurales ont traditionnellement compté sur l’agriculture pour leur principale source de revenus, mais ce n’est plus aussi vrai de nos jours. En 2005, pour 10 travailleur·ses dans les zones rurales, 2 travaillaient dans l’agriculture, 2 travaillaient dans l’industrie et la construction et 6 travaillaient dans les services, y compris le tourisme. À Paris, en revanche, près de 70 % des résidents en 2018 travaillaient dans le commerce, les transports et autres industries de services, tandis que 25 % travaillaient dans les secteurs de l’administration publique, de l’éducation, de la santé et de l’action sociale. Seulement 7 % environ travaillaient dans l’agriculture, l’industrie et la construction.",
+            "title":"Travail"
+        },
+        {
+            "text": "Dans les zones rurales françaises, 70% des déplacements sont effectués en voiture et 22% sont faits à pied. Ce qui laisse environ 8% des habitant·es en zone rurale utiliser les transports publics. Comparons cela à la façon dont les gens voyagent à Paris, et nous pouvons voir une autre différence entre la vie urbaine et rurale. A Paris, par exemple, 70% des habitants utilisent le métro, les bus ou les trains pour se rendre au travail.",
+            "title":"Les déplacements"
+        },
+        {
+            "text": "La pollution de l’air dans les zones urbaines est généralement plus élevée qu’elle ne l’est dans les zones rurales. En réalité, c’est surtout des pollutions différentes. En ville, nous sommes plus exposés à des gaz rejetés par la combustion des moteurs (oxydes d’azote par exemple) alors qu’en campagne, il y aura plus de pollution liée à l’agriculture (usage de pesticides par exemple), ou au chauffage au bois. Contrairement à ce qu’on croit, la campagne n’est pas épargnée par la pollution. Il y a même des gaz émis en ville qui vont, en se transformant, polluer les campagnes. C’est le cas par exemple de l’ozone (à ne pas confondre avec le phénomène de trou d’ozone !).",
+            "title":"Pollution de l’air"
+        },
+        {
+            "text": "Tout comme la pollution de l’air, les villes produisent beaucoup plus de nuisances sonores que les zones rurales. Des activités telles que la construction des routes, et des bâtiments, les embouteillages et même les événements sociaux créent plus de nuisances sonores dans les villes que dans les zones rurales. Et comme pour la pollution de l’air, les sources de pollution sonore sont généralement beaucoup plus concentrées dans les zones urbaines. ",
+            "title":"Pollution sonore"
+        },
+        {
+            "text": "Sais-tu combien d’étoiles en moyenne on peut voir la nuit au centre de Paris par exemple ? Jusqu’à 50-100 étoiles. Dans les campagnes les moins soumises à la pollution lumineuse en France (et donc les moins peuplées), on peut observer plusieurs milliers d’étoiles ! La biodiversité (oiseaux et insectes par exemple) est très sensible à cette pollution lumineuse.",
+            "title":"Pollution lumineuse"
+        },
+        {
+            "text": "Il existe beaucoup plus de services en ville qu’à la campagne. Si tu habites à Paris, pense au nombre de restaurants ou de marchés différents où tu peux te rendre pour acheter de la nourriture. Dans les zones rurales, il y en a beaucoup moins. Il peut y avoir juste une ou deux épiceries différentes et une boulangerie à proximité, par exemple. Cela s’applique également à d’autres services, comme les hôpitaux, médecins, pharmacies ou spécialistes de santé. Les habitants des zones rurales doivent souvent voyager plus loin pour obtenir des soins, se rendre à leur travail ou dans un magasin que les habitants des zones urbaines.",
+            "title":"Services"
+        }
+    ],
+    "readmore": "Lire plus",
+    "style": "style"
+}

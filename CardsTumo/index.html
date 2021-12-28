@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link id="style" rel="stylesheet">
+    <link id="styleAnim" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/loader.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container" id="loadingScreen">
+        <div id="loader">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div id="scrollBtns">
+        <button onclick="scrollCards(-1)" id="back" class="scrollBtn">
+            <img src="images/Prev.svg" class="scrolImg">
+            <div class="shadow"></div>
+        </button>
+    <div id="div"></div>
+        <button onclick="scrollCards(1)"  id="next" class="scrollBtn">
+            <img src="images/Next.svg" class="scrolImg">
+            <div class="shadow"></div>
+        </button>
+    </div>
+
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/parser.js"></script>
+    <script src="scripts/flow.js"></script>
+    <script src="scripts/view.js"></script>
+</body>
+
+</html>

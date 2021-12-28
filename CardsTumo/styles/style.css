@@ -1,0 +1,197 @@
+@font-face {
+    font-family: FedraSansAltProDemi;
+    src: url('../fonts/Fedra\ Sans\ Alt\ Pro/FedraSansAltPro-Demi.otf');
+}
+
+@font-face {
+    font-family: FedraSansAltProBold;
+    src: url('../fonts/Fedra\ Sans\ Alt\ Pro/FedraSansAltPro-Bold.otf');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #F3F3F3;
+    z-index: 5;
+}
+
+.card {
+    top: 33px;
+    transition: 0.5s;
+    background-color: #F3F3F3;
+    box-shadow: 3px 3px 4px 0 rgba(222,222,230,0.5), -3px -3px 4px 0 #FEFEFE;
+    position: absolute;
+    width: 742px;
+    height: 461px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 19px;
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    top: 29.19px;
+    max-height: 103px;
+    position: absolute;
+    width: 678px;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 49px;
+    font-family: FedraSansAltProBold;
+    color:#5C7CA6;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+}
+
+.text {
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    max-height: 401px;
+    width: 678px;
+    color: #5C7CA6;
+    font-family: FedraSansAltProDemi;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 25px;
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.readMore {
+    position: absolute;
+    right: 18px;
+    top: 397px;
+    cursor: pointer;
+    height: 45px;
+    width: 152px;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+    box-shadow: 3px 3px 3px 0 rgba(222,222,230,0.5), -3px -3px 3px 0 #FEFEFE;
+    color: #5C7CA6;
+    font-family: FedraSansAltProBold;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 25px;
+    align-items: center;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.readMore:hover {
+    opacity: 0.7;
+}
+.readMore:active {
+    opacity: 0.5;
+}
+
+#scrollBtns {
+    position: absolute;
+    top: 520px;
+    height: 51px;
+    width: 152px;
+    border-radius: 48.5px;
+    background-color: #F3F3F3;
+    box-shadow: 3px 3px 3px 0 rgba(222,222,230,0.5), -3px -3px 3px 0 #FEFEFE;
+    z-index: 3;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.scrollBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: none;
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+#back {
+    background-color: #F3F3F3;
+    top: 6px;
+    left: 8px;
+    border-radius: 48.5px;
+    box-shadow: 2px -1px 2px 0 #FEFEFE, -1px 2px 2px 0 rgba(0,0,0,0.16);
+
+}
+
+.disable {
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+.scrollBtn:hover {
+    opacity: 0.7;
+}
+
+.scrollBtn:active {
+    opacity: 0.5;
+}
+
+.scrollBtn:active .shadow {
+    opacity: 0;
+}
+
+#next {
+    background-color: #F3F3F3;
+    box-shadow: 2px -1px 2px 0 #FEFEFE, -1px 2px 2px 0 rgba(0,0,0,0.16);
+    left: 104px;
+    top: 6px;
+    border-radius: 48.5px;
+}
+
+.scrolImg {
+    height: 16px;
+    width: 18.29px;
+}
+
+#div {
+    position: absolute;
+    left: 59px;
+    top: 23px;
+    height: 5px;
+    width: 34px;
+    transform: rotate(90deg);
+    border-radius: 19px;
+    background-color: #F3F3F3;
+    box-shadow: 2px 2px 2px 0 rgba(222,222,230,0.5), -1px -1px 2px 0 #FEFEFE;
+}
+
+.shadow {
+    border-radius: 100%;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    box-shadow: -1px 1px 1px 0 rgba(254,254,254,0.48);
+}

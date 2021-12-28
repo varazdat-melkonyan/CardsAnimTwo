@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "text": "L’énergie marémotrice est similaire à l’énergie hydroélectrique puisque les deux utilisent de l’eau pour produire de l’électricité. Cependant, les centrales marémotrices utilisent le changement naturel entre la marée haute et la marée basse pour produire de l’électricité plutôt que des réservoirs contrôlés artificiellement. L’énergie marémotrice est prévisible, mais les modèles de marée ne correspondent pas toujours à nos besoins de consommation d’énergie. Cela signifie que nous pourrions produire un excès d’énergie à certains moments de la journée et pas assez à d’autres moments. Et comme la géothermie, ce type de production d’énergie est limité à des zones bien précises. Il s’avère que l’énergie marémotrice est difficile à trouver dans les pays enclavés.",
+            "title":"Marée"
+        },
+        {
+            "text": "L’énergie géothermique, comme l’énergie hydroélectrique, est toujours disponible et ne dépend pas des jours ensoleillés ou venteux pour produire de l’électricité. Certaines de ces centrales utilisent des sources souterraines de vapeur, qui sont acheminées dans la centrale à partir de puits situés sous la centrale, pour entraîner une turbine et produire de l’électricité. Plus communément, de l’eau très chaude est pompée de sous la Terre à travers des tuyaux jusqu’à la surface, où elle commence à bouillir et à libérer de la vapeur. Cette vapeur est ensuite utilisée pour mettre en marche une turbine. Bien que ces centrales aient beaucoup de potentiel, elles sont limitées à des emplacements spécifiques avec un accès facile à l’énergie. Creuser des trous pour construire ces centrales peut déclencher des tremblements de terre dans certains cas.",
+            "title":"Géothermie"
+        }
+    ],
+    "readmore": "Lire plus",
+    "style": "style"
+}
