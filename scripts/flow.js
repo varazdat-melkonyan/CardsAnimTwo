@@ -1,13 +1,12 @@
 let set = { index: 0, readMore: "" };
-let anim;
 const timeout = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function onLoad() {
-    view.createCard(-1, "",              "left",    "",                set.readMore);
+    view.createCard(-1, "",              "top",    "",                set.readMore);
     view.createCard(0, set.data[0].text, "center",  set.data[0].title, set.readMore);
-    view.createCard(1, set.data[1].text, "right",   set.data[1].title, set.readMore);
+    view.createCard(1, set.data[1].text, "bottom",   set.data[1].title, set.readMore);
 
     $("body").mousedown(function (e) {
         mousedown(e)
@@ -27,16 +26,11 @@ async function onLoad() {
 $(async () => {
     let path = parser.getParams();
     await $.get(path, async function (json) {
-        anim = json.anim;
         set.data = json.data;
         set.readMore = json.readmore;
         let style =  document.getElementById("style");
         style.onload = onLoad;
         style.href = `styles/${json.style}.css`;
-        if (json.anim != undefined) {
-            let styleAnim =  document.getElementById("styleAnim");
-            styleAnim.href = `styles/${json.anim}.css`;
-        }
     });
 });
 
@@ -92,37 +86,36 @@ let coolDown = false;
 
 const mousedown = async (e) => {
     if (!drag.ended && coolDown == false) {
-        drag.mouseDownPos = e.pageX;
-        drag.start = e.pageX;
+        drag.mouseDownPos = e.pageY;
+        drag.start = e.pageY;
         drag.ended = true;
     }
 }
 
 const mousemove = (e) => {
     if (drag.ended) {
-        area.x = e.pageX - drag.start;
+        area.x = e.pageY - drag.start;
         $(`.card`).css("transition", `none`);
 
         $(".card").each(function (i) {
-            let margin = parseFloat($(this).css("margin-left"));
-            $(this).css("margin-left", margin + area.x);
+            let margin = parseFloat($(this).css("margin-top"));
+            $(this).css("margin-top", margin + area.x);
         });
-
-        drag.start = e.pageX;
+        drag.start = e.pageY;
         $(`.card`).css("transition", `0.5s`);
     }
 
-    if (e.pageX <= 70 || e.pageX >= window.innerWidth - 70) {
+    if (e.pageY <= 70 || e.pageY >= window.innerHeight - 70) {
         mouseup(e);
     }
-    if (($(`#-1`).css("margin-left") < "-1800px" || $(`#${set.data.length}`).css("margin-left") < "1800")) {
+    if (($(`#-1`).css("margin-top") < "-1800px" || $(`#${set.data.length}`).css("margin-top") < "1800")) {
         mouseup(e);
     }
 }
 
 const mouseup = (e) => {
     if (drag.ended) {
-        drag.end = e.pageX;
+        drag.end = e.pageY;
         drag.ended = false;
 
         let difference = drag.end - drag.mouseDownPos;

@@ -23,7 +23,7 @@ const view = {
         `;
 
         $("body").append(card);
-        $(`#${i}`).css("margin-left", 2400 * i);
+        $(`#${i}`).css("margin-top", 2400 * i);
 
         if (text.length > 650) {
             $(`#${i} .readMore`).css("display", "flex");
@@ -87,37 +87,29 @@ const view = {
             let count = -1;
             for(let i = set.index - 1; i < set.index + direction; i++)
             {
-                $(`#${i}`).css("margin-left", 2400 * count);
-                if (anim != undefined) {
-                    $(`#${set.index - 1}`).addClass("toLeft");
-                    setTimeout(() => $(`#${set.index - 1}`).removeClass("toLeft"), 500);
-                }
+                $(`#${i}`).css("margin-top", 2400 * count);
                 count++;
             }
         } else {
             let count = 1;
             for(let i = set.index + 1; i > set.index + direction; i--)
             {
-                $(`#${i}`).css("margin-left", 2400 * count);
-                if (anim != undefined) {
-                    $(`#${set.index + 1}`).addClass("toRight");
-                    setTimeout(() => $(`#${set.index + 1}`).removeClass("toRight"), 500);
-                }
+                $(`#${i}`).css("margin-top", 2400 * count);
                 count--;
             }
         }
         view.editCard(set.index, set.data[set.index].text, set.data[set.index].title);
-        $(".card").removeClass("left center right");
+        $(".card").removeClass("top center bottom");
         $(`#${set.index}`).addClass("center");
         
         
         
         if (direction > 0) {
-            $(`#${set.index - 1}`).addClass("left");
-            $(`#${set.index - 2}`).addClass("right");
+            $(`#${set.index - 1}`).addClass("top");
+            $(`#${set.index - 2}`).addClass("bottom");
             $(`#${set.index - 2}`).hide();
             setTimeout(() => {
-            $(`#${set.index - 2}`).css("margin-left", "2400px");
+            $(`#${set.index - 2}`).css("margin-top", "2400px");
             $(`#${set.index - 2}`).attr("id", set.index + 1);
             },10);
 
@@ -125,11 +117,11 @@ const view = {
                 $(`#${set.index + 1}`).show();
             },100);
         } else {
-            $(`#${set.index + 1}`).addClass("right");
-            $(`#${set.index + 2}`).addClass("left");
+            $(`#${set.index + 1}`).addClass("bottom");
+            $(`#${set.index + 2}`).addClass("top");
             $(`#${set.index + 2}`).hide();
             setTimeout(() => {
-            $(`#${set.index + 2}`).css("margin-left", "-2400px");
+            $(`#${set.index + 2}`).css("margin-top", "-2400px");
             $(`#${set.index + 2}`).attr("id", set.index - 1);
             },10);
             setTimeout(() => {
@@ -138,8 +130,8 @@ const view = {
         }
     },
     reset: (index) => {
-        $(".left").css("margin-left", "-2400px");
-        $(".center").css("margin-left", "0px");
-        $(".right").css("margin-left", "2400px");
+        $(".top").css("margin-top", "-2400px");
+        $(".center").css("margin-top", "0px");
+        $(".bottom").css("margin-top", "2400px");
     }
 }
